@@ -1,0 +1,30 @@
+{
+  "name": "batch-data-runner",
+  "version": "1.0.0",
+  "description": "Collect data to do the operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node dist/test.js"
+  },
+  "keywords": [
+    "batch data",
+    "batch process",
+    "collect data",
+    "module",
+    "node",
+    "typescript"
+  ],
+  "author": "C-ZW",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^12.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/C-ZW/batch-data-runner"
+  },
+  "bugs": {
+    "url": "https://github.com/C-ZW/batch-data-runner/issues"
+  },
+  "homepage": "https://github.com/C-ZW/batch-data-runner"
+}
