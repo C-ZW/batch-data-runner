@@ -13,7 +13,6 @@ function paramCheck(condition: boolean, message: string) {
 export default class BatchDataRunner<T> {
     private buffer: T[];
     private emitter: EventEmitter
-    private timeInterval: number
     private sizeLimit: number;
     private callback: (data: T[]) => void;
 
@@ -35,11 +34,10 @@ export default class BatchDataRunner<T> {
         this.buffer = [];
         this.emitter = new EventEmitter();
         this.sizeLimit = sizeLimit;
-        this.timeInterval = timeInterval;
         this.callback = callback;
 
         if (timeInterval >= 0) {
-            this.timer();
+            this.timer(timeInterval);
         }
     }
 
@@ -74,12 +72,12 @@ export default class BatchDataRunner<T> {
         }
     }
 
-    private timer() {
+    private timer(timeInterval: number) {
         this.timeout = setInterval(() => {
             if (this.buffer.length !== 0) {
                 this.run();
             }
-        }, this.timeInterval);
+        }, timeInterval);
     }
 
     private run() {
