@@ -1,8 +1,8 @@
 {
   "name": "batch-data-runner",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Collect data to do the batch operation",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node dist/test.js"
   },
